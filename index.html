@@ -3,27 +3,116 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CoffeeArt - Escolha a Unidade</title>
+    <title>CoffeeArt - Seleção de Unidade</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        body { background-color: #fff4e6; font-family: sans-serif; display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100vh; margin: 0; }
-        .logo { max-width: 150px; margin-bottom: 30px; }
-        h2 { color: #755437; margin-bottom: 30px; text-transform: uppercase; letter-spacing: 2px; }
-        .btn-unidade { 
-            width: 80%; max-width: 300px; padding: 20px; margin: 10px;
-            background-color: #755437; color: white; border: none; border-radius: 15px;
-            font-size: 1.2rem; font-weight: bold; cursor: pointer; text-decoration: none;
-            text-align: center; box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-            transition: transform 0.2s;
+        body {
+            background-color: #fff4e6;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+            box-sizing: border-box;
         }
-        .btn-unidade:active { transform: scale(0.95); }
+
+        .logo {
+            max-width: 150px;
+            height: auto;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            color: #755437;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .container-botoes {
+            width: 100%;
+            max-width: 400px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .btn-unidade {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #755437;
+            color: white;
+            text-decoration: none;
+            padding: 25px;
+            border-radius: 15px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            box-shadow: 0 4px 15px rgba(117, 84, 55, 0.3);
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .btn-unidade:active {
+            transform: scale(0.96);
+        }
+
+        .btn-unidade i {
+            font-size: 1.2rem;
+        }
+
+        .info-txt {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .info-txt span {
+            font-size: 0.8rem;
+            font-weight: normal;
+            opacity: 0.8;
+            margin-top: 4px;
+        }
+
+        .footer {
+            margin-top: 50px;
+            font-size: 0.7rem;
+            color: #be9b7b;
+            text-transform: uppercase;
+        }
     </style>
 </head>
 <body>
-    <img src="Logotipo.png" class="logo">
+
+    <img src="Logotipo.png" alt="CoffeeArt Logo" class="logo" onerror="this.style.display='none'">
+
     <h2>Escolha a Unidade</h2>
-    
-    <a href="https://claudiaartesdigitais-maker.github.io/coffeeart-embu/" class="btn-unidade">EMBU DAS ARTES</a>
-    <a href="https://claudiaartesdigitais-maker.github.io/coffeeartitapevi/" class="btn-unidade">ITAPEVI</a>
+
+    <div class="container-botoes">
+        <a href="https://claudiaartesdigitais-maker.github.io/coffeeart/" class="btn-unidade">
+            <div class="info-txt">
+                EMBU DAS ARTES
+                <span>Cardápio Completo</span>
+            </div>
+            <i class="fas fa-chevron-right"></i>
+        </a>
+
+        <a href="https://claudiaartesdigitais-maker.github.io/coffeeartitapevi/" class="btn-unidade">
+            <div class="info-txt">
+                ITAPEVI
+                <span>Cardápio Completo</span>
+            </div>
+            <i class="fas fa-chevron-right"></i>
+        </a>
+    </div>
+
+    <div class="footer">
+        Desenvolvido por Claudia Artes Digitais
+    </div>
 
 </body>
 </html>
